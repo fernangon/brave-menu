@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;    
+
+    /* The vertical-align property sets the vertical alignment of an element. */
+    vertical-align: baseline; /* baseline = the element is aligned with the baseline of the parent. This is default. */
+
+    /*  The border property is a shorthand property for:
+            border-width
+            border-style (required)
+            border-color 
+    */
+    border: 0;
+
+    font: inherit;
+    font-family: sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+
+    background-color: orangered;
+
+    font-size: 1.5em;
+}
+
+
+.imagen {
+    position: fixed;
+    top: 50px;
+    left: 250px;
+
+    width: 15vw;
+    height: 5vh;
+
+}
+
+
+.nav {
+    position: relative;
+
+    width: 480px;
+
+    margin: 10em auto;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.nav a {
+    display: block;
+
+    position: relative;
+    float: left;
+
+    width: 25%;
+
+    padding: 1em 0 2em;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: .7s;
+}
+
+.nav a:hover {
+    color: blueviolet;
+}
+
+
+.effect {
+    position: absolute;
+    left: -12.5%;
+
+    transition: .7s ease-in-out;
+}
+
+.nav a:nth-child(1):hover ~ .effect {
+    left: 12.5%;
+}
+
+.nav a:nth-child(2):hover ~ .effect {
+    left: 37.5%;
+}
+
+.nav a:nth-child(3):hover ~ .effect {
+    left: 62.5%;
+}
+
+.nav a:nth-child(4):hover ~ .effect {
+    left: 87.5%;
+}
+
+
+.dot-nav::after {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    bottom: 40px;
+
+    width: 100%;
+    height: 2px;
+
+    background: blueviolet;
+}
+
+.dot-nav a::after {
+    content: '';
+
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+
+    margin-left: -2px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 100%;
+
+    background: blueviolet;
+}
+
+
+.dot-nav .effect {
+    bottom: 36px;
+
+    margin-left: -5px;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 100%;
+
+    background: yellow;
+}
+
+
+
+
+
+
